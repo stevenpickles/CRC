@@ -45,7 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ACRC.cs" />
+    <Compile Include="Abstract Classes\ACRC.cs" />
+    <Compile Include="Abstract Classes\ACRCTable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
