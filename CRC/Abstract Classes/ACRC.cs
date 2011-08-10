@@ -171,7 +171,13 @@ namespace CRC
 
 
         protected abstract void GenerateCRC();
-        public abstract int GetCRC( T message );
+        
+        public virtual int GetCRC( T message )
+        {
+            _message = message;
+            GenerateCRC();
+            return ( (int) _calculatedCRC );
+        }
 
     }
 }
