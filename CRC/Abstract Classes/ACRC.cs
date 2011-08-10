@@ -78,10 +78,13 @@ namespace CRC
             _message = message;
 
 
-            _mask = (ulong) ( ( 1 << order ) - 1 );
+            _mask = (ulong) 1 << ( _order - 1 );                                     //  MSB is 1, all other bits 0
+            _mask = _mask - 1;                                                  //  MSB is 0, all other bits 1
+            _mask = _mask << 1;                                                 //  LSB is 0, all other bits 1
+            _mask = _mask | 1;                                                  //  all mask bits are 1
 
 
-            _highBit = (ulong) 1 << ( order - 1 );                                  //  MSB is 1, all other bits 0
+            _highBit = (ulong) 1 << ( _order - 1 );                                  //  MSB is 1, all other bits 0
 
             if ( _polynomial != ( _polynomial & _mask ) )
             {

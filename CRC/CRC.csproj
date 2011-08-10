@@ -58,6 +58,16 @@
     <Compile Include="Concrete Classes\CRC16Modbus\CRC16ModbusBF.cs" />
     <Compile Include="Concrete Classes\CRC16Modbus\CRC16ModbusT.cs" />
     <Compile Include="Concrete Classes\CRC16Modbus\CRC16ModbusTF.cs" />
+    <Compile Include="Concrete Classes\CRC32\CRC32B.cs" />
+    <Compile Include="Concrete Classes\CRC32\CRC32BF.cs" />
+    <Compile Include="Concrete Classes\CRC32\CRC32T.cs" />
+    <Compile Include="Concrete Classes\CRC32\CRC32TF.cs" />
+    <Compile Include="Concrete Classes\CRC3ROHC\CRC3B.cs" />
+    <Compile Include="Concrete Classes\CRC3ROHC\CRC3BF.cs" />
+    <Compile Include="Concrete Classes\CRC8\CRC8B.cs" />
+    <Compile Include="Concrete Classes\CRC8\CRC8BF.cs" />
+    <Compile Include="Concrete Classes\CRC8\CRC8T.cs" />
+    <Compile Include="Concrete Classes\CRC8\CRC8TF.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Static Classes\CRC16Modbus.cs" />
