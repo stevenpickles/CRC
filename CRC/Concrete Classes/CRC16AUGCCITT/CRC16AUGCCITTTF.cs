@@ -3,12 +3,12 @@ using System.Collections;
 
 namespace CRC
 {
-    public sealed class CRC16ModbusB<T> : ACRCBitByBit<T>
+    public class CRC16AUGCCITTTF<T> : ACRCTableFast<T>
         where T : IEnumerable
     {
-        private static volatile CRC16ModbusB<T> _instance;
+        private static volatile CRC16AUGCCITTTF<T> _instance;
         private static object _flag = new object();
-        public static CRC16ModbusB<T> Instance
+        public static CRC16AUGCCITTTF<T> Instance
         {
             get
             {
@@ -18,7 +18,7 @@ namespace CRC
                     {
                         if ( _instance == null )
                         {
-                            _instance = new CRC16ModbusB<T>();
+                            _instance = new CRC16AUGCCITTTF<T>();
                         }
                     }
                 }
@@ -27,7 +27,7 @@ namespace CRC
             }
         }
 
-        private CRC16ModbusB() : base( 16 , 0x8005 , 0xFFFF , 0x0000 , true , true  , true )
+        private CRC16AUGCCITTTF() : base( 16 , 0x1021 , 0x1D0F , 0x0000 , false , false , true )
         {
         }
     }

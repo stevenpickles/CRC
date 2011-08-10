@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace CRC
 {
-    public class CRC16ModbusTF<T> : ACRCTableFast<T>
+    public sealed class CRC16ModbusTF<T> : ACRCTableFast<T>
         where T : IEnumerable
     {
         private static volatile CRC16ModbusTF<T> _instance;

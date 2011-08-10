@@ -50,6 +50,10 @@
     <Compile Include="Abstract Classes\ACRCTableFast.cs" />
     <Compile Include="Abstract Classes\ACRCBitByBit.cs" />
     <Compile Include="Abstract Classes\ACRCBitByBitFast.cs" />
+    <Compile Include="Concrete Classes\CRC16AUGCCITT\CRC16AUGCCITTB.cs" />
+    <Compile Include="Concrete Classes\CRC16AUGCCITT\CRC16AUGCCITTT.cs" />
+    <Compile Include="Concrete Classes\CRC16AUGCCITT\CRC16AUGCCITTBF.cs" />
+    <Compile Include="Concrete Classes\CRC16AUGCCITT\CRC16AUGCCITTTF.cs" />
     <Compile Include="Concrete Classes\CRC16Modbus\CRC16ModbusB.cs" />
     <Compile Include="Concrete Classes\CRC16Modbus\CRC16ModbusBF.cs" />
     <Compile Include="Concrete Classes\CRC16Modbus\CRC16ModbusT.cs" />
