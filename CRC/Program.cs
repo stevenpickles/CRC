@@ -24,10 +24,40 @@ namespace CRC
                       0x12345678 ,
                       0x12345678 );
             
-            PrintCRC( "CRC-3" , 
+            PrintCRC( "CRC-3/ROHC" , 
                       "{0:x1}" ,
                       CRC3ROHCB<string>.Instance.GetCRC( testString ) ,
                       CRC3ROHCBF<string>.Instance.GetCRC( testString ) );
+            
+            PrintCRC( "CRC-4/ITU" , 
+                      "{0:x1}" ,
+                      CRC4ITUB<string>.Instance.GetCRC( testString ) ,
+                      CRC4ITUBF<string>.Instance.GetCRC( testString ) );
+            
+            PrintCRC( "CRC-5/EPC" , 
+                      "{0:x2}" ,
+                      CRC5EPCB<string>.Instance.GetCRC( testString ) ,
+                      CRC5EPCBF<string>.Instance.GetCRC( testString ) );
+            
+            PrintCRC( "CRC-5/ITU" , 
+                      "{0:x2}" ,
+                      CRC5ITUB<string>.Instance.GetCRC( testString ) ,
+                      CRC5ITUBF<string>.Instance.GetCRC( testString ) );
+            
+            PrintCRC( "CRC-5/USB" , 
+                      "{0:x2}" ,
+                      CRC5USBB<string>.Instance.GetCRC( testString ) ,
+                      CRC5USBBF<string>.Instance.GetCRC( testString ) );
+            
+            PrintCRC( "CRC-6/DARC" , 
+                      "{0:x2}" ,
+                      CRC6DARCB<string>.Instance.GetCRC( testString ) ,
+                      CRC6DARCBF<string>.Instance.GetCRC( testString ) );
+            
+            PrintCRC( "CRC-6/ITU" , 
+                      "{0:x2}" ,
+                      CRC6ITUB<string>.Instance.GetCRC( testString ) ,
+                      CRC6ITUBF<string>.Instance.GetCRC( testString ) );
             
             PrintCRC( "CRC-8" , 
                       "{0:x2}" ,
@@ -36,7 +66,7 @@ namespace CRC
                       CRC8T<string>.Instance.GetCRC( testString ) ,
                       CRC8TF<string>.Instance.GetCRC( testString ) );
             
-            PrintCRC( "CRC-16 Modbus" , 
+            PrintCRC( "CRC-16/Modbus" , 
                       "{0:x4}" ,
                       CRC16ModbusB<string>.Instance.GetCRC( testString ) ,
                       CRC16ModbusBF<string>.Instance.GetCRC( testString ) ,
@@ -44,7 +74,7 @@ namespace CRC
                       CRC16ModbusTF<string>.Instance.GetCRC( testString ) ,
                       CRC16Modbus<string>.GetCRC( testString ) );
 
-            PrintCRC( "CRC-16 AUG-CCITT" , 
+            PrintCRC( "CRC-16/AUG-CCITT" , 
                       "{0:x4}" ,
                       CRC16AUGCCITTB<string>.Instance.GetCRC( testString ) ,
                       CRC16AUGCCITTBF<string>.Instance.GetCRC( testString ) ,
@@ -57,7 +87,7 @@ namespace CRC
                       CRC32BF<string>.Instance.GetCRC( testString ) ,
                       CRC32T<string>.Instance.GetCRC( testString ) ,
                       CRC32TF<string>.Instance.GetCRC( testString ) );
-            
+
         }
         
         static void PrintCRC( string description , string format , int bitByBit , int bitByBitFast , int table , int tableFast , int special )

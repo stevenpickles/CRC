@@ -3,12 +3,12 @@ using System.Collections;
 
 namespace CRC
 {
-    public sealed class CRC3ROHCBF<T> : ACRCBitByBitFast<T>
+    public sealed class CRC5USBBF<T> : ACRCBitByBitFast<T>
         where T : IEnumerable
     {
-        private static volatile CRC3ROHCBF<T> _instance;
+        private static volatile CRC5USBBF<T> _instance;
         private static object _flag = new object();
-        public static CRC3ROHCBF<T> Instance
+        public static CRC5USBBF<T> Instance
         {
             get
             {
@@ -18,7 +18,7 @@ namespace CRC
                     {
                         if ( _instance == null )
                         {
-                            _instance = new CRC3ROHCBF<T>();
+                            _instance = new CRC5USBBF<T>();
                         }
                     }
                 }
@@ -27,7 +27,7 @@ namespace CRC
             }
         }
 
-        private CRC3ROHCBF() : base( 3 , 0x3 , 0x7 , 0x00 , true , true  , true )
+        private CRC5USBBF() : base( 5 , 0x05 , 0x1F , 0x1F , true , true  , true )
         {
         }
     }

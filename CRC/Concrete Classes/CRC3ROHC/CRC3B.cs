@@ -27,7 +27,7 @@ namespace CRC
             }
         }
 
-        private CRC3ROHCB() : base( 3 , 0x7 , 0x3 , 0x00 , true , true  , true )
+        private CRC3ROHCB() : base( 3 , 0x3 , 0x7 , 0x00 , true , true  , true )
         {
         }
     }
