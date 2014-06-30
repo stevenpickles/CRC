@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{CAB9D727-A3B1-4AE3-9C1B-B5A965A9EBF6}</ProjectGuid>
     <OutputType>Exe</OutputType>
@@ -58,6 +58,10 @@
     <Compile Include="Concrete Classes\CRC16Modbus\CRC16ModbusBF.cs" />
     <Compile Include="Concrete Classes\CRC16Modbus\CRC16ModbusT.cs" />
     <Compile Include="Concrete Classes\CRC16Modbus\CRC16ModbusTF.cs" />
+    <Compile Include="Concrete Classes\CRC16\CRC16B.cs" />
+    <Compile Include="Concrete Classes\CRC16\CRC16BF.cs" />
+    <Compile Include="Concrete Classes\CRC16\CRC16T.cs" />
+    <Compile Include="Concrete Classes\CRC16\CRC16TF.cs" />
     <Compile Include="Concrete Classes\CRC32\CRC32B.cs" />
     <Compile Include="Concrete Classes\CRC32\CRC32BF.cs" />
     <Compile Include="Concrete Classes\CRC32\CRC32T.cs" />

@@ -10,7 +10,7 @@ namespace CRC
 
         static void Main( string[] args )
         {
-            string testString = "123456789";
+            string testString = "12345678";
 
             Console.WriteLine( "------------------------------------------------------------------------------" );
             Console.WriteLine( "CRC Type                   BBB    BBB Fast       Table  Table Fast     Special" );
@@ -65,6 +65,13 @@ namespace CRC
                       CRC8BF<string>.Instance.GetCRC( testString ) ,
                       CRC8T<string>.Instance.GetCRC( testString ) ,
                       CRC8TF<string>.Instance.GetCRC( testString ) );
+            
+            PrintCRC( "CRC-16" , 
+                      "{0:x4}" ,
+                      CRC16B<string>.Instance.GetCRC( testString ) ,
+                      CRC16BF<string>.Instance.GetCRC( testString ) ,
+                      CRC16T<string>.Instance.GetCRC( testString ) ,
+                      CRC16TF<string>.Instance.GetCRC( testString ) );
             
             PrintCRC( "CRC-16/Modbus" , 
                       "{0:x4}" ,
